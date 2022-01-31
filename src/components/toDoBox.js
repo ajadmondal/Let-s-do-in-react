@@ -16,7 +16,7 @@ const ToDoBox = () => {
       setValue("");
     }
   };
-  const handleClick = () => { setDoList([value, ...doList]); setValue("") };
+  const handleClick = () => { if(value !== "") setDoList([value, ...doList]); setValue("") };
   function handleRemoveItem(id){
       setDoList(doList.filter((toDo, index) => id !== index));
       console.log(id);
